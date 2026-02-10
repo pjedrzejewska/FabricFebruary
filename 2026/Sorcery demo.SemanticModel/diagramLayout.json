@@ -1,0 +1,99 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 222.85714285714286,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 67.777777777777771,
+            "y": 0
+          },
+          "nodeIndex": "Customer",
+          "nodeLineageTag": "0210c4df-a722-41ed-a197-cda324bdce8b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 966.8833333333331,
+            "y": 388.16666666666669
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "73e5e0c3-4ba2-4881-94c0-9fc29442fdfd",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 932.98888888888894,
+            "y": 0
+          },
+          "nodeIndex": "Product",
+          "nodeLineageTag": "a7d7a511-0583-4088-9fc8-963ba7ef8471",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 414.34838969816406,
+            "y": 97.737986151827911
+          },
+          "nodeIndex": "Sales",
+          "nodeLineageTag": "836786b7-1954-49e0-ae54-10cdd1e96b11",
+          "size": {
+            "height": 599.30555555555554,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1486,
+            "y": 0
+          },
+          "nodeIndex": "_Measures",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 2498.7222222222222,
+            "y": 283.53420763584666
+          },
+          "nodeIndex": "Time Intelligence",
+          "nodeLineageTag": "d63a4d27-6a17-4783-8f7f-b6fe35426820",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 70,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

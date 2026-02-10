@@ -1,0 +1,42 @@
+using System;
+using System.IO;
+using System.Linq;
+
+// get columns starting with KPI
+// -----------------------------------------------------------------------------------------
+var sourcePath = @"C:\\Users\\PaulinaJedrzejewska\\OneDrive - JSP Cloud GmbH\\Documents\\GIT\\EventsPrivate\\FabricFebruary\\2026\\Sorcery demo.SemanticModel\\definition\\tables\\Sales.tmdl";
+var sourceLines = File.ReadAllLines(sourcePath);
+var kpiColumns = new List<string>();
+
+
+// Add Measures from columns
+// -----------------------------------------------------------------------------------------
+var destinationPath = "C:\\Users\\PaulinaJedrzejewska\\OneDrive - JSP Cloud GmbH\\Documents\\GIT\\EventsPrivate\\FabricFebruary\\2026\\Sorcery demo.SemanticModel\\definition\\tables\\_Measures.tmdl";
+
+// read all destinationLines
+var destinationLines = File.ReadAllLines(destinationPath).ToList();
+
+// find the first line that starts with "partition" to insert new measures before that line
+var index = destinationLines.FindIndex(line => line.TrimStart().StartsWith("partition"));
+
+
+
+// Collect calculation items
+
+var calculationPath = @"C:\\Users\\PaulinaJedrzejewska\\OneDrive - JSP Cloud GmbH\\Documents\\GIT\\EventsPrivate\\FabricFebruary\\2026\\Sorcery demo.SemanticModel\\definition\\tables\\Time Intelligence.tmdl";
+var calculationItems = new List<string>();
+
+Console.WriteLine("Collecting calculation items...");
+Console.WriteLine("");
+foreach (var line in File.ReadAllLines(calculationPath))
+{
+    var text = line.Trim();
+    if (text.StartsWith("calculationItem "))
+    {
+        var part = text.Substring(16).Split('=')[0].Trim(); // after "calculationItem "
+        var calculationItem = part.Trim('\''); // remove quotes if present
+        calculationItems.Add(calculationItem);
+
+        Console.WriteLine(calculationItem);
+    }
+}

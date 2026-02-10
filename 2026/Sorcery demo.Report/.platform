@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Sorcery demo"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c7050fb2-344f-42e6-89bc-6b62b5e1e9de"
+  }
+}

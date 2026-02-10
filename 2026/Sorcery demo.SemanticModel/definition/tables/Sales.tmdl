@@ -1,0 +1,422 @@
+table Sales
+	lineageTag: a952a00d-2b6d-4b8a-8405-179e4906b910
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 50c8d6fc-4263-4cc3-8119-cbc3343f58f7
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: df36f313-96f0-4732-83f5-7fc74a7140b4
+		summarizeBy: none
+		sourceColumn: OrderDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b5854a7d-3ed1-4a37-85c2-1b12f7c578f3
+		summarizeBy: count
+		sourceColumn: DueDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipDateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: d5d94218-9d53-483b-b635-71fcb44570dd
+		summarizeBy: count
+		sourceColumn: ShipDateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 61e591e7-02f8-4748-920e-1cb71cee3b01
+		summarizeBy: none
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column PromotionKey
+		dataType: int64
+		formatString: 0
+		lineageTag: a2fb9e79-b11e-4d7b-9a67-dc184c859d26
+		summarizeBy: count
+		sourceColumn: PromotionKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2f035da0-d7f4-495e-bbdb-2a228700e87e
+		summarizeBy: count
+		sourceColumn: CurrencyKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesTerritoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 326c7450-59bb-4b87-b058-920089d8ab07
+		summarizeBy: count
+		sourceColumn: SalesTerritoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderNumber
+		dataType: string
+		lineageTag: 24ee8c12-107d-4df3-985a-4949a193e7cf
+		summarizeBy: none
+		sourceColumn: SalesOrderNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column SalesOrderLineNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 4a6df3d7-9ca6-4d4a-bdb2-3ea28f59c6e1
+		summarizeBy: sum
+		sourceColumn: SalesOrderLineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column RevisionNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: e9d688bd-08e6-4c20-8646-c16e488f9a59
+		summarizeBy: sum
+		sourceColumn: RevisionNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI OrderQuantity'
+		dataType: int64
+		formatString: 0
+		lineageTag: c89276c2-07b8-4f16-8738-97f748fffffe
+		summarizeBy: sum
+		sourceColumn: KPI OrderQuantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: double
+		lineageTag: 5767dea7-33f5-4f39-9f19-a47bb588074a
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI ExtendedAmount'
+		dataType: double
+		lineageTag: c43f14e9-d0cc-4b3a-912f-e6a2748183b9
+		summarizeBy: sum
+		sourceColumn: KPI ExtendedAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column UnitPriceDiscountPct
+		dataType: int64
+		formatString: 0
+		lineageTag: 006a28c0-8d57-4da6-bea6-ee0815b5cee9
+		summarizeBy: sum
+		sourceColumn: UnitPriceDiscountPct
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI DiscountAmount'
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d849da2-8ad8-4f16-b0f3-5b087571d167
+		summarizeBy: sum
+		sourceColumn: KPI DiscountAmount
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI ProductStandardCost'
+		dataType: double
+		lineageTag: 02a67e7a-2868-43e8-b0c5-19d4074efea4
+		summarizeBy: sum
+		sourceColumn: KPI ProductStandardCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI TotalProductCost'
+		dataType: double
+		lineageTag: 4b31405d-8fd5-4aa8-93d9-af0c199b3544
+		summarizeBy: sum
+		sourceColumn: KPI TotalProductCost
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI SalesAmount'
+		dataType: double
+		lineageTag: 6f270c9c-3b2f-412f-8b84-fb8faaf542e4
+		summarizeBy: sum
+		sourceColumn: KPI SalesAmount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI TaxAmt'
+		dataType: double
+		lineageTag: a603613e-146c-4fa0-918c-ff82b4d2cca4
+		summarizeBy: sum
+		sourceColumn: KPI TaxAmt
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI Freight'
+		dataType: double
+		lineageTag: 2404ecd6-cb76-4a91-b8cf-ca8e47e708d9
+		summarizeBy: sum
+		sourceColumn: KPI Freight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CarrierTrackingNumber
+		dataType: string
+		lineageTag: 2bb2c0f8-b59c-48a0-b805-68bc8ff76785
+		summarizeBy: none
+		sourceColumn: CarrierTrackingNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column CustomerPONumber
+		dataType: string
+		lineageTag: 91a23ad5-d5ea-4771-bcf5-a8af9f909aa2
+		summarizeBy: none
+		sourceColumn: CustomerPONumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: string
+		lineageTag: d66dd151-3fb0-421a-92ec-032787b5d632
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column DueDate
+		dataType: string
+		lineageTag: d31b7092-dc04-4a14-b514-e24f5825133b
+		summarizeBy: none
+		sourceColumn: DueDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column ShipDate
+		dataType: string
+		lineageTag: cbeece20-aeb2-443c-8078-105d12ae20e0
+		summarizeBy: none
+		sourceColumn: ShipDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'KPI SalesWithoutTax'
+		dataType: double
+		lineageTag: 16634d3c-9a57-4c37-aedf-7d8e64b77fbe
+		summarizeBy: sum
+		sourceColumn: KPI SalesWithoutTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI SalesWithFreight'
+		dataType: double
+		lineageTag: cda196fa-1585-4417-878d-8cc605217bca
+		summarizeBy: sum
+		sourceColumn: KPI SalesWithFreight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI SalesWithTaxAndFreight'
+		dataType: double
+		lineageTag: cdc51f60-01fb-40d9-b811-b4ada2d0efb0
+		summarizeBy: sum
+		sourceColumn: KPI SalesWithTaxAndFreight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI DiscountedSales'
+		dataType: double
+		lineageTag: af6d491d-cd47-4589-8148-cb9f121bcb52
+		summarizeBy: sum
+		sourceColumn: KPI DiscountedSales
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI GrossMargin'
+		dataType: double
+		lineageTag: a23afd66-166e-408d-8e6a-5e4dad4ee1b3
+		summarizeBy: sum
+		sourceColumn: KPI GrossMargin
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI GrossMarginWithFreight'
+		dataType: double
+		lineageTag: 2d43e871-bf81-4673-9c68-908224bad80c
+		summarizeBy: sum
+		sourceColumn: KPI GrossMarginWithFreight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI TotalRevenue'
+		dataType: double
+		lineageTag: ad67fac4-ec9c-463a-b496-404739e5e68b
+		summarizeBy: sum
+		sourceColumn: KPI TotalRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI NetRevenue'
+		dataType: double
+		lineageTag: f0ecea2c-bcb0-4955-90be-270e04ce7722
+		summarizeBy: sum
+		sourceColumn: KPI NetRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI ExtendedWithDiscount'
+		dataType: double
+		lineageTag: 5069afc6-f0c6-4568-a850-c1709bd29714
+		summarizeBy: sum
+		sourceColumn: KPI ExtendedWithDiscount
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI ExtendedWithTax'
+		dataType: double
+		lineageTag: 3454f871-35b3-466c-ba50-181abf8c908e
+		summarizeBy: sum
+		sourceColumn: KPI ExtendedWithTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI ExtendedWithFreight'
+		dataType: double
+		lineageTag: ed108464-0594-4bca-8ff0-7a370b7bbdd2
+		summarizeBy: sum
+		sourceColumn: KPI ExtendedWithFreight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI ProductCostWithTax'
+		dataType: double
+		lineageTag: ab3c3256-56a2-48c0-b46b-3dc91ccc63e3
+		summarizeBy: sum
+		sourceColumn: KPI ProductCostWithTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI ProductCostWithFreight'
+		dataType: double
+		lineageTag: df0d5b0e-7a45-4983-b7aa-4a710445d2c9
+		summarizeBy: sum
+		sourceColumn: KPI ProductCostWithFreight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI ProductCostWithTaxAndFreight'
+		dataType: double
+		lineageTag: 7702179d-6605-43ec-a35d-1e9f269a892b
+		summarizeBy: sum
+		sourceColumn: KPI ProductCostWithTaxAndFreight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI DiscountPlusFreight'
+		dataType: double
+		lineageTag: e309c576-44a0-4f64-a869-183d3f61c877
+		summarizeBy: sum
+		sourceColumn: KPI DiscountPlusFreight
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI DiscountPlusTax'
+		dataType: double
+		lineageTag: 554b3892-bd5e-466e-8996-c211d2c9fd4e
+		summarizeBy: sum
+		sourceColumn: KPI DiscountPlusTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'KPI DiscountPlusFreightAndTax'
+		dataType: double
+		lineageTag: 8a35b9b7-c91f-4b3f-aa5d-1a27b67da2ed
+		summarizeBy: sum
+		sourceColumn: KPI DiscountPlusFreightAndTax
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Sales = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\PaulinaJedrzejewska\OneDrive - JSP Cloud GmbH\Documents\GIT\EventsPrivate\Power BI Next Step\Shootout\Data\Sales.csv"),[Delimiter=";", Columns=43, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductKey", Int64.Type}, {"OrderDateKey", Int64.Type}, {"DueDateKey", Int64.Type}, {"ShipDateKey", Int64.Type}, {"CustomerKey", Int64.Type}, {"PromotionKey", Int64.Type}, {"CurrencyKey", Int64.Type}, {"SalesTerritoryKey", Int64.Type}, {"SalesOrderNumber", type text}, {"SalesOrderLineNumber", Int64.Type}, {"RevisionNumber", Int64.Type}, {"KPI OrderQuantity", Int64.Type}, {"UnitPrice", type number}, {"KPI ExtendedAmount", type number}, {"UnitPriceDiscountPct", Int64.Type}, {"KPI DiscountAmount", Int64.Type}, {"KPI ProductStandardCost", type number}, {"KPI TotalProductCost", type number}, {"KPI SalesAmount", type number}, {"KPI TaxAmt", type number}, {"KPI Freight", type number}, {"CarrierTrackingNumber", type text}, {"CustomerPONumber", type text}, {"OrderDate", type text}, {"DueDate", type text}, {"ShipDate", type text}, {"KPI SalesWithoutTax", type number}, {"KPI SalesWithFreight", type number}, {"KPI SalesWithTaxAndFreight", type number}, {"KPI DiscountedSales", type number}, {"KPI GrossMargin", type number}, {"KPI GrossMarginWithFreight", type number}, {"KPI TotalRevenue", type number}, {"KPI NetRevenue", type number}, {"KPI ExtendedWithDiscount", type number}, {"KPI ExtendedWithTax", type number}, {"KPI ExtendedWithFreight", type number}, {"KPI ProductCostWithTax", type number}, {"KPI ProductCostWithFreight", type number}, {"KPI ProductCostWithTaxAndFreight", type number}, {"KPI DiscountPlusFreight", type number}, {"KPI DiscountPlusTax", type number}, {"KPI DiscountPlusFreightAndTax", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

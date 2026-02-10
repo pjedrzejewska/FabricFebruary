@@ -1,0 +1,184 @@
+table Date
+	lineageTag: 914b9904-d192-4be1-9c61-7b39d46309cc
+
+	column DateKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 837fde9f-1d52-4bb6-bd88-6c1186f05c6e
+		summarizeBy: none
+		sourceColumn: DateKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column FullDateAlternateKey
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: e370a730-18ea-4dfe-bf60-a4d5e69f559a
+		summarizeBy: none
+		sourceColumn: FullDateAlternateKey
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DayNumberOfWeek
+		dataType: int64
+		formatString: 0
+		lineageTag: c3534605-18ab-4f09-a183-057034ca1156
+		summarizeBy: none
+		sourceColumn: DayNumberOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishDayNameOfWeek
+		dataType: string
+		lineageTag: b0d9c0d7-4e77-43eb-9d5e-5abdd0da0c8d
+		summarizeBy: none
+		sourceColumn: EnglishDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishDayNameOfWeek
+		dataType: string
+		lineageTag: 9dea1934-db01-451d-aabb-d78a966de7ee
+		summarizeBy: none
+		sourceColumn: SpanishDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchDayNameOfWeek
+		dataType: string
+		lineageTag: 65c95808-a72c-44d5-9e38-abc7539eb38b
+		summarizeBy: none
+		sourceColumn: FrenchDayNameOfWeek
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfMonth
+		dataType: int64
+		formatString: 0
+		lineageTag: c16364d1-4cc3-470b-8d0c-bcb538733f7d
+		summarizeBy: none
+		sourceColumn: DayNumberOfMonth
+
+		annotation SummarizationSetBy = Automatic
+
+	column DayNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a7a3d76-aac3-4877-a50c-8ec122cc7f4d
+		summarizeBy: none
+		sourceColumn: DayNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 5b3efcfa-d24d-4c02-8b36-5c633dbfc0d4
+		summarizeBy: none
+		sourceColumn: WeekNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnglishMonthName
+		dataType: string
+		lineageTag: 221999e5-b079-4fa8-9381-9efb6df6bac4
+		summarizeBy: none
+		sourceColumn: EnglishMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SpanishMonthName
+		dataType: string
+		lineageTag: 37c53ad8-3935-4644-922f-641a7fe5edd3
+		summarizeBy: none
+		sourceColumn: SpanishMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column FrenchMonthName
+		dataType: string
+		lineageTag: fd9c146a-4df3-46c7-afbe-8baed8153eac
+		summarizeBy: none
+		sourceColumn: FrenchMonthName
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthNumberOfYear
+		dataType: int64
+		formatString: 0
+		lineageTag: cbfb6245-7e95-4891-ab4a-2d9eb4c60ae0
+		summarizeBy: none
+		sourceColumn: MonthNumberOfYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: eb684b09-baf0-49b6-ac46-6d53b6a522ba
+		summarizeBy: none
+		sourceColumn: CalendarQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarYear
+		dataType: int64
+		formatString: 0
+		lineageTag: a856a822-9a84-47ad-ac8c-5aee45e5ae19
+		summarizeBy: none
+		sourceColumn: CalendarYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column CalendarSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: 404d187a-b014-452b-8368-b74481b82d27
+		summarizeBy: none
+		sourceColumn: CalendarSemester
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalQuarter
+		dataType: int64
+		formatString: 0
+		lineageTag: ad0be73c-d4db-4656-bb36-43a20d01e422
+		summarizeBy: none
+		sourceColumn: FiscalQuarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalYear
+		dataType: int64
+		formatString: 0
+		lineageTag: 2af6eec1-ffce-4b72-9c7e-a06646df4941
+		summarizeBy: none
+		sourceColumn: FiscalYear
+
+		annotation SummarizationSetBy = Automatic
+
+	column FiscalSemester
+		dataType: int64
+		formatString: 0
+		lineageTag: 1cd56e23-a029-4abd-852e-77ef4e169b05
+		summarizeBy: none
+		sourceColumn: FiscalSemester
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Date = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\PaulinaJedrzejewska\OneDrive - JSP Cloud GmbH\Documents\GIT\EventsPrivate\Power BI Next Step\Shootout\Data\Date.csv"),[Delimiter=",", Columns=19, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"DateKey", Int64.Type}, {"FullDateAlternateKey", type date}, {"DayNumberOfWeek", Int64.Type}, {"EnglishDayNameOfWeek", type text}, {"SpanishDayNameOfWeek", type text}, {"FrenchDayNameOfWeek", type text}, {"DayNumberOfMonth", Int64.Type}, {"DayNumberOfYear", Int64.Type}, {"WeekNumberOfYear", Int64.Type}, {"EnglishMonthName", type text}, {"SpanishMonthName", type text}, {"FrenchMonthName", type text}, {"MonthNumberOfYear", Int64.Type}, {"CalendarQuarter", Int64.Type}, {"CalendarYear", Int64.Type}, {"CalendarSemester", Int64.Type}, {"FiscalQuarter", Int64.Type}, {"FiscalYear", Int64.Type}, {"FiscalSemester", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

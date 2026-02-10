@@ -1,0 +1,7 @@
+expression FolderSourceFiles = "C:\Users\paulina.jedrzejewska\Downloads\Daten\" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: d0fa1d8c-5232-4507-8874-e92f773c97f5
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

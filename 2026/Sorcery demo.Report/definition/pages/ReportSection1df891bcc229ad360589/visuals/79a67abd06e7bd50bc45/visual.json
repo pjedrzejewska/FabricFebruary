@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "name": "79a67abd06e7bd50bc45",
+  "position": {
+    "x": 259.14110429447851,
+    "y": 132.51533742331287,
+    "z": 0,
+    "height": 302.33128834355824,
+    "width": 761.71779141104287
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Thank You!",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "96pt"
+                    }
+                  }
+                ],
+                "horizontalTextAlignment": "center"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

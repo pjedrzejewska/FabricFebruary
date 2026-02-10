@@ -1,0 +1,518 @@
+table _Measures
+	lineageTag: 46daf286-6268-4730-b502-d90b53a2db31
+
+	column Value
+		formatString: 0
+		lineageTag: 9a04f8e3-247c-4e4e-bdf6-dc244e52d928
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Value]
+
+		annotation SummarizationSetBy = Automatic
+
+    /// SUM('Sales'[KPI DiscountPlusFreightAndTax])
+    measure 'KPI DiscountPlusFreightAndTax' = SUM('Sales'[KPI DiscountPlusFreightAndTax])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI DiscountPlusTax])
+    measure 'KPI DiscountPlusTax' = SUM('Sales'[KPI DiscountPlusTax])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI DiscountPlusFreight])
+    measure 'KPI DiscountPlusFreight' = SUM('Sales'[KPI DiscountPlusFreight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ProductCostWithTaxAndFreight])
+    measure 'KPI ProductCostWithTaxAndFreight' = SUM('Sales'[KPI ProductCostWithTaxAndFreight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ProductCostWithFreight])
+    measure 'KPI ProductCostWithFreight' = SUM('Sales'[KPI ProductCostWithFreight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ProductCostWithTax])
+    measure 'KPI ProductCostWithTax' = SUM('Sales'[KPI ProductCostWithTax])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ExtendedWithFreight])
+    measure 'KPI ExtendedWithFreight' = SUM('Sales'[KPI ExtendedWithFreight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ExtendedWithTax])
+    measure 'KPI ExtendedWithTax' = SUM('Sales'[KPI ExtendedWithTax])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ExtendedWithDiscount])
+    measure 'KPI ExtendedWithDiscount' = SUM('Sales'[KPI ExtendedWithDiscount])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI NetRevenue])
+    measure 'KPI NetRevenue' = SUM('Sales'[KPI NetRevenue])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI TotalRevenue])
+    measure 'KPI TotalRevenue' = SUM('Sales'[KPI TotalRevenue])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI GrossMarginWithFreight])
+    measure 'KPI GrossMarginWithFreight' = SUM('Sales'[KPI GrossMarginWithFreight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI GrossMargin])
+    measure 'KPI GrossMargin' = SUM('Sales'[KPI GrossMargin])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI DiscountedSales])
+    measure 'KPI DiscountedSales' = SUM('Sales'[KPI DiscountedSales])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI SalesWithTaxAndFreight])
+    measure 'KPI SalesWithTaxAndFreight' = SUM('Sales'[KPI SalesWithTaxAndFreight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI SalesWithFreight])
+    measure 'KPI SalesWithFreight' = SUM('Sales'[KPI SalesWithFreight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI SalesWithoutTax])
+    measure 'KPI SalesWithoutTax' = SUM('Sales'[KPI SalesWithoutTax])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI Freight])
+    measure 'KPI Freight' = SUM('Sales'[KPI Freight])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI TaxAmt])
+    measure 'KPI TaxAmt' = SUM('Sales'[KPI TaxAmt])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI SalesAmount])
+    measure 'KPI SalesAmount' = SUM('Sales'[KPI SalesAmount])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI TotalProductCost])
+    measure 'KPI TotalProductCost' = SUM('Sales'[KPI TotalProductCost])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ProductStandardCost])
+    measure 'KPI ProductStandardCost' = SUM('Sales'[KPI ProductStandardCost])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI DiscountAmount])
+    measure 'KPI DiscountAmount' = SUM('Sales'[KPI DiscountAmount])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI ExtendedAmount])
+    measure 'KPI ExtendedAmount' = SUM('Sales'[KPI ExtendedAmount])
+        displayFolder: BASE
+
+    /// SUM('Sales'[KPI OrderQuantity])
+    measure 'KPI OrderQuantity' = SUM('Sales'[KPI OrderQuantity])
+        displayFolder: BASE
+
+    /// CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI DiscountPlusFreightAndTax PM' = CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI DiscountPlusFreightAndTax AC-PY %' = CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI DiscountPlusFreightAndTax PY' = CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI DiscountPlusFreightAndTax AC' = CALCULATE([KPI DiscountPlusFreightAndTax], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI DiscountPlusTax PM' = CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI DiscountPlusTax AC-PY %' = CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI DiscountPlusTax PY' = CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI DiscountPlusTax AC' = CALCULATE([KPI DiscountPlusTax], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI DiscountPlusFreight PM' = CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI DiscountPlusFreight AC-PY %' = CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI DiscountPlusFreight PY' = CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI DiscountPlusFreight AC' = CALCULATE([KPI DiscountPlusFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ProductCostWithTaxAndFreight PM' = CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ProductCostWithTaxAndFreight AC-PY %' = CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ProductCostWithTaxAndFreight PY' = CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ProductCostWithTaxAndFreight AC' = CALCULATE([KPI ProductCostWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ProductCostWithFreight PM' = CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ProductCostWithFreight AC-PY %' = CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ProductCostWithFreight PY' = CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ProductCostWithFreight AC' = CALCULATE([KPI ProductCostWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ProductCostWithTax PM' = CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ProductCostWithTax AC-PY %' = CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ProductCostWithTax PY' = CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ProductCostWithTax AC' = CALCULATE([KPI ProductCostWithTax], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ExtendedWithFreight PM' = CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ExtendedWithFreight AC-PY %' = CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ExtendedWithFreight PY' = CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ExtendedWithFreight AC' = CALCULATE([KPI ExtendedWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ExtendedWithTax PM' = CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ExtendedWithTax AC-PY %' = CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ExtendedWithTax PY' = CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ExtendedWithTax AC' = CALCULATE([KPI ExtendedWithTax], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ExtendedWithDiscount PM' = CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ExtendedWithDiscount AC-PY %' = CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ExtendedWithDiscount PY' = CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ExtendedWithDiscount AC' = CALCULATE([KPI ExtendedWithDiscount], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI NetRevenue PM' = CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI NetRevenue AC-PY %' = CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI NetRevenue PY' = CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI NetRevenue AC' = CALCULATE([KPI NetRevenue], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI TotalRevenue PM' = CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI TotalRevenue AC-PY %' = CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI TotalRevenue PY' = CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI TotalRevenue AC' = CALCULATE([KPI TotalRevenue], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI GrossMarginWithFreight PM' = CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI GrossMarginWithFreight AC-PY %' = CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI GrossMarginWithFreight PY' = CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI GrossMarginWithFreight AC' = CALCULATE([KPI GrossMarginWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI GrossMargin PM' = CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI GrossMargin AC-PY %' = CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI GrossMargin PY' = CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI GrossMargin AC' = CALCULATE([KPI GrossMargin], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI DiscountedSales PM' = CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI DiscountedSales AC-PY %' = CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI DiscountedSales PY' = CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI DiscountedSales AC' = CALCULATE([KPI DiscountedSales], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI SalesWithTaxAndFreight PM' = CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI SalesWithTaxAndFreight AC-PY %' = CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI SalesWithTaxAndFreight PY' = CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI SalesWithTaxAndFreight AC' = CALCULATE([KPI SalesWithTaxAndFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI SalesWithFreight PM' = CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI SalesWithFreight AC-PY %' = CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI SalesWithFreight PY' = CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI SalesWithFreight AC' = CALCULATE([KPI SalesWithFreight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI SalesWithoutTax PM' = CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI SalesWithoutTax AC-PY %' = CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI SalesWithoutTax PY' = CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI SalesWithoutTax AC' = CALCULATE([KPI SalesWithoutTax], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI Freight PM' = CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI Freight AC-PY %' = CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI Freight PY' = CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI Freight AC' = CALCULATE([KPI Freight], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI TaxAmt PM' = CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI TaxAmt AC-PY %' = CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI TaxAmt PY' = CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI TaxAmt AC' = CALCULATE([KPI TaxAmt], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI SalesAmount PM' = CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI SalesAmount AC-PY %' = CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI SalesAmount PY' = CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI SalesAmount AC' = CALCULATE([KPI SalesAmount], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI TotalProductCost PM' = CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI TotalProductCost AC-PY %' = CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI TotalProductCost PY' = CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI TotalProductCost AC' = CALCULATE([KPI TotalProductCost], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ProductStandardCost PM' = CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ProductStandardCost AC-PY %' = CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ProductStandardCost PY' = CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ProductStandardCost AC' = CALCULATE([KPI ProductStandardCost], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI DiscountAmount PM' = CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI DiscountAmount AC-PY %' = CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI DiscountAmount PY' = CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI DiscountAmount AC' = CALCULATE([KPI DiscountAmount], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI ExtendedAmount PM' = CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI ExtendedAmount AC-PY %' = CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI ExtendedAmount PY' = CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI ExtendedAmount AC' = CALCULATE([KPI ExtendedAmount], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+    /// CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="PM")
+    measure 'KPI OrderQuantity PM' = CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="PM")
+        displayFolder: PM
+
+    /// CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+    measure 'KPI OrderQuantity AC-PY %' = CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="AC-PY %")
+        displayFolder: AC-PY %
+
+    /// CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="PY")
+    measure 'KPI OrderQuantity PY' = CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="PY")
+        displayFolder: PY
+
+    /// CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="AC")
+    measure 'KPI OrderQuantity AC' = CALCULATE([KPI OrderQuantity], 'Time Intelligence'[TimeIntelligence]="AC")
+        displayFolder: AC
+
+	partition _Measures-ed665600-d412-49bf-8d45-8c1f02b909eb = calculated
+		mode: import
+		source = {1}
+
+	annotation PBI_Id = 001596c78ba7433a8b36a85fcab889bc
+

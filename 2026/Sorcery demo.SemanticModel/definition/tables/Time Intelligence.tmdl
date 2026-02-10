@@ -1,0 +1,30 @@
+table 'Time Intelligence'
+	lineageTag: d63a4d27-6a17-4783-8f7f-b6fe35426820
+
+	calculationGroup
+
+		calculationItem AC = SELECTEDMEASURE()
+
+		calculationItem PY = CALCULATE(SELECTEDMEASURE(), SAMEPERIODLASTYEAR('Date'[FullDateAlternateKey]))
+
+		calculationItem 'AC-PY %' =
+				VAR ac_ = CALCULATE(SELECTEDMEASURE(), 'Time Intelligence'[TimeIntelligence]= "AC")
+				VAR py_ = CALCULATE(SELECTEDMEASURE(), 'Time Intelligence'[TimeIntelligence]= "PY")
+				
+				RETURN
+				DIVIDE(ac_ - py_, py_)
+
+		calculationItem PM = CALCULATE(SELECTEDMEASURE(), PREVIOUSMONTH('Date'[FullDateAlternateKey]))
+
+	column TimeIntelligence
+		dataType: string
+		lineageTag: 495ea430-4834-46ba-9ae3-b7ee926f934f
+		sourceColumn: Name
+		sortByColumn: Ordinal
+
+	column Ordinal
+		dataType: int64
+		isHidden
+		lineageTag: f61d3d85-40de-4681-a32d-be655a84ce1c
+		sourceColumn: Ordinal
+
